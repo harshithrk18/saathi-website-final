@@ -1,0 +1,1 @@
+$(".modal").each(function(l){$(this).on("show.bs.modal",function(l){var o=$(this).attr("data-easein");$(".modal-dialog").velocity("transition."+o)})});
