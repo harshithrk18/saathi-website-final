@@ -74,13 +74,11 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
   padding: 20px 0;
-  height: 62px;
+  height: 72px;
   transition: all 0.5s;
 }
 
-#header #logo {
-  float: left;
-}
+
 
 @media (min-width: 1024px) {
   #header #logo {
@@ -96,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
+  display: none;
 }
 
 
@@ -108,9 +107,13 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   #header #logo h1 {
     font-size: 28px;
+    display: block;
   }
   #header #logo img {
-    max-height: 40px;
+    display: none;
+  }
+  #header #logo_iitg {
+      display: none;
   }
 }
 
@@ -1094,21 +1097,43 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #18d26e;
 }
 
-/* Team Section
+/*counsellors section
 --------------------------------*/
+#team .member-desktop{
+   display:inline-block;
+}
+
+#team .member-mobile{
+   display:none;
+}
+
+@media screen and (max-width: 500px) {
+    #team .member-desktop{
+       display:none;
+    }
+
+    #team .member-mobile{
+       display:block;
+    }
+}
+
+
+
+
+
 #team {
   background: #fff;
   padding: 60px 0;
 }
 
-#team .member {
+#team .member  {
   text-align: center;
   margin-bottom: 20px;
   background: #000;
   position: relative;
 }
 
-#team .member .member-info {
+#team .member  .member-info {
   opacity: 0;
   display: flex;
   justify-content: center;
@@ -1121,11 +1146,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.2s;
 }
 
-#team .member .member-info-content {
+
+
+#team .member  .member-info-content {
   margin-top: -50px;
   transition: margin 0.2s;
 }
-
+#team .member  .member-info-content-team {
+  margin-top: -50px;
+  transition: margin 0.2s;
+}
+#team .member  .member-info-content-mobile {
+  margin-top: -50px;
+  transition: margin 0.2s;
+}
 #team .member:hover .member-info {
   background: rgba(0, 0, 0, 0.7);
   opacity: 1;
@@ -1136,51 +1170,62 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: 0;
   transition: margin 0.4s;
 }
-
-#team .member h4 {
+#team .member:hover .member-info-content-team {
+  margin-top: 0;
+  transition: margin 0.4s;
+}
+#team .member:hover .member-info-content-mobile {
+  margin-top: 0;
+  transition: margin 0.4s;
+}
+#team .member  h4 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
   color: #fff;
 }
 
-#team .member h5 {
+#team .member  h5 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
   color: #fff;
 }
 
-#team .member span {
+#team .member  span {
   font-style: italic;
   display: block;
   font-size: 13px;
   color: #fff;
 }
 
-#team .member .social {
+#team .member  .social {
   margin-top: 15px;
 }
 
-#team .member .social a {
+#team .member  .social a {
   transition: none;
   color: #fff;
 }
 
-#team .member .social a:hover {
+#team .member  .social a:hover {
   color: #18d26e;
 }
 
-#team .member .social i {
+#team .member  .social i {
   font-size: 18px;
   margin: 0 2px;
 }
+
+
+
 
 /* Contact Section
 --------------------------------*/
 #contact{
 
-  background: linear-gradient(rgba(1, 2, 2, 0.5), rgba(0, 0, 0, 0.1)), url("../images/w.jpg") no-repeat fixed center center;
+  background: linear-gradient(rgba(1, 2, 2, 0.5), rgba(0, 0, 0, 0.1)), url("../images/newsac.jpeg") no-repeat fixed center center;
+
 
 }
 
@@ -1433,6 +1478,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .footer-top .footer-links ul a:hover {
   color: #18d26e;
 }
+#footer .footer-top .footer-links p a:hover {
+  color: white;
+}
+
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
@@ -1442,38 +1491,38 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 26px;
 }
 
-#footer .footer-top .footer-newsletter {
-  margin-bottom: 30px;
-}
+/*#footer .footer-top .footer-newsletter {*/
+/*  margin-bottom: 30px;*/
+/*}*/
 
-#footer .footer-top .footer-newsletter input[type="email"] {
-  border: 0;
-  padding: 6px 8px;
-  width: 65%;
-}
+/*#footer .footer-top .footer-newsletter input[type="email"] {*/
+/*  border: 0;*/
+/*  padding: 6px 8px;*/
+/*  width: 65%;*/
+/*}*/
 
-#footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #18d26e;
-  border: 0;
-  width: 35%;
-  padding: 6px 0;
-  text-align: center;
-  color: #fff;
-  transition: 0.3s;
-  cursor: pointer;
-}
+/*#footer .footer-top .footer-newsletter input[type="submit"] {*/
+/*  background: #18d26e;*/
+/*  border: 0;*/
+/*  width: 35%;*/
+/*  padding: 6px 0;*/
+/*  text-align: center;*/
+/*  color: #fff;*/
+/*  transition: 0.3s;*/
+/*  cursor: pointer;*/
+/*}*/
 
-#footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #13a456;
-}
+/*#footer .footer-top .footer-newsletter input[type="submit"]:hover {*/
+/*  background: #13a456;*/
+/*}*/
 
-#footer .copyright {
-  text-align: center;
-  padding-top: 30px;
-}
+/*#footer .copyright {*/
+/*  text-align: center;*/
+/*  padding-top: 30px;*/
+/*}*/
 
-#footer .credits {
-  text-align: center;
-  font-size: 13px;
-  color: #ddd;
-}
+/*#footer .credits {*/
+/*  text-align: center;*/
+/*  font-size: 13px;*/
+/*  color: #ddd;*/
+/*}*/
