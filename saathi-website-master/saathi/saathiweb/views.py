@@ -11,7 +11,7 @@ def index(request):
         webmail = request.POST.get('email')
         body = request.POST.get('message')
 
-        TO = ['ayush2016@iitg.ac.in']
+        TO = ['ayush2016@iitg.ac.in','pallabita.b.c@iitg.ernet.in','namrata.r@iitg.ernet.in','rkakati@iitg.ernet.in','nesmita.d@iitg.ernet.in']
         SUBJECT = 'Saathi Appointment Form'
         TEXT = name +" \n "+ webmail +" \n "+ body
 
